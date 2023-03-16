@@ -1,0 +1,28 @@
+
+/* 
+-------
+RESET
+-------
+ */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 
+-------
+COMMON
+-------
+ */
+.d-flex{
+    display: flex;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
