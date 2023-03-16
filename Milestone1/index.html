@@ -13,6 +13,55 @@
     <title>Boolzapp</title>
 </head>
 <body>
+    <div class="backgroundTop"></div>
+    <div id="app" class="d-flex justify-center m-auto">
+        
+        <div class="leftSide">
+
+            <div class="headerTop d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <img class="img" src="img/avatar_io.jpg" alt="avatarIO">
+                    <span>Sofia</span>
+                </div>
+                <div class="d-flex">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+
+            <div class="headerMiddle d-flex align-items-center">
+                <div class="bell d-flex align-items-center justify-center">
+                    <i class="fa-solid fa-bell-slash"></i></div>
+                <div>
+                    <h5>Ricevi notifiche di nuovi messaggi</h5>
+                    <a href="">Attiva notifiche desktop</a>
+                </div>
+            </div>
+
+            <div class="headerBottom">
+                <form class="d-flex" role="search">
+                    <button class="" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input class="" type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search">
+                </form>
+            </div>
+
+            <div class="contact">
+                <div class="d-flex" v-for="(contact, index) in contacts">
+                    <img class="img" :src="avatar" alt="">
+                    <div>
+                        <div>{{ contact.name }}</div>
+                        <span>Ultimo messaggio inviato</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightSide">
+            
+        </div>
+
+
+    </div>
     
     <!-- VUEjs -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
