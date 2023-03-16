@@ -9,6 +9,11 @@ RESET
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: #dadbd3;
+    height: 100vh;
+}
 /* 
 -------
 COMMON
@@ -26,3 +31,59 @@ COMMON
     justify-content: center;
 }
 
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.m-auto{
+    margin: auto;
+}
+
+.img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+/* 
+-------
+Boolzapp
+-------
+ */
+#app{
+    width: 75%;
+}
+
+.backgroundTop{
+    width: 100vw;
+    height: 120px;
+    background-color: #159588;
+}
+
+.leftSide{
+    width: 35%;
+}
+
+.rightSide{
+    width: 65%;
+}
+
+.headerTop,.headerBottom{
+    background-color: #eaeaea;
+}
+
+.headerMiddle{
+    background-color: #91dafa;
+}
+
+.bell{
+    background-color: white;
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    color: #91dafa;
+}
+
+.contact{
+    background-color: white;
+    flex-grow: 1;
+}
