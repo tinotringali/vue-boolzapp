@@ -13,6 +13,7 @@ RESET
 body{
     background-color: #dadbd3;
     height: 100vh;
+    position: relative;
 }
 /* 
 -------
@@ -35,13 +36,48 @@ COMMON
     justify-content: space-between;
 }
 
+.justify-content-around{
+    justify-content: space-around;
+}
+
+.p-1{
+    padding: 10px;
+}
+
+.p-2{
+    padding: 5px;
+}
+
 .m-auto{
     margin: auto;
 }
 
+.m-y{
+    margin: 10px 0;
+}
+
+.m-x{
+    margin: 0 10px;
+}
+
+.m-left{
+    margin-left: 10px;
+}
+
+.text-gray{
+    color: #b1b1b1;
+}
+
+.text-dark-gray{
+    color: #6b7376;
+}
+.text-blue{
+    color: lightskyblue;
+}
+
 .img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 /* 
@@ -49,8 +85,12 @@ COMMON
 Boolzapp
 -------
  */
-#app{
+.Boolzapp{
     width: 75%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%)
 }
 
 .backgroundTop{
@@ -67,8 +107,12 @@ Boolzapp
     width: 65%;
 }
 
-.headerTop,.headerBottom{
+.headerTop,.headerBottom,.headerTopright,.text{
     background-color: #eaeaea;
+}
+
+.headerTop{
+    border-right: 1px solid #b1b1b1;
 }
 
 .headerMiddle{
@@ -77,13 +121,52 @@ Boolzapp
 
 .bell{
     background-color: white;
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     color: #91dafa;
 }
 
+form{
+    height: 30px;
+
+}
+
+.bnt-search{
+    width: 15% ;
+    background-color: white;
+    border: none;
+    border: 1px solid #eaeaea;
+}
+
+.inputnewchat{
+ width: 85%;
+ border: none;
+ border: 1px solid #eaeaea;
+}
+
 .contact{
     background-color: white;
-    flex-grow: 1;
+    height: 500px;
+}
+
+.usercontact{
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 5px;
+}
+
+.chat{
+    height: 545px;
+    background-image: url("../img/mine.jpg");
+}
+
+.text{
+    background-color: #f3eeea;
+}
+
+.inputtext{
+    width: 90%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
 }
