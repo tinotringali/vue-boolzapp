@@ -49,7 +49,7 @@
                 </form>
             </div>
 
-            <div class="contact p-1">
+            <div v-cloak class="contact p-1">
                 <div class="usercontact d-flex m-y" v-for="(contact, index) in contacts">
                     <img class="img" :src="contact.avatar" alt="avatar">
                     <div class="m-x">
@@ -74,9 +74,11 @@
                 </div>
             </div>
 
-            <div class="chat">
-                
+            <div class="chat d-flex justify-content-around p-1">
+                <div class="received "></div>
+                <div class="send"></div>
             </div>
+            
 
             <div class="d-flex align-items-center text p-1">
                 <i class="fa-regular fa-face-smile text-dark-gray m-x"></i>
