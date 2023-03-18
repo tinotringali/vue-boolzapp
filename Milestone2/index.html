@@ -53,7 +53,7 @@
             <!--/Sezione per la ricerca delle chat -->
             <!-- Sezione contatti -->
             <div v-cloak class="contact p-1">
-                <div class="usercontact d-flex m-y" v-for="(contact, index) in contacts">
+                <div class="usercontact d-flex m-y" v-for="(contact, index) in contacts" @click="selectChat(index)" :class="{active: index === active}">
                     <img class="img" :src="contact.avatar" alt="avatar">
                     <div class="m-x">
                         <div><strong>{{ contact.name }}</strong></div>
@@ -70,8 +70,8 @@
             <!-- Header top utente -->
             <div class="headerTopright d-flex justify-content-between align-items-center p-1">
                 <div class="d-flex align-items-center">
-                    <img class="img" src="img/avatar_io.jpg" alt="avatarIO">
-                    <span class="m-x">Sofia</span>
+                    <img v-cloak class="img" :src="contacts[active].avatar" alt="avatarIO">
+                    <span v-cloak class="m-x">{{contacts[active].name}}</span>
                 </div>
                 <div class="d-flex">
                     <i class="fa-solid fa-magnifying-glass text-gray"></i>
@@ -82,13 +82,8 @@
             <!--/Header top utente -->
             <!-- Sezione chat --> 
             <div class="chat">
-                <div class="d-flex align-items-start flex-column">
-                    <div class="received "></div>
-                    <div class="received "></div>
-                </div>
-                <div class="d-flex align-items-end flex-column">
-                    <div class="send"></div>
-                    <div class="send"></div>
+                <div class="d-flex flex-column" v-for="(message, index) in contacts[active].messages" :class="{send: message.status === 'sent', received: message.status === 'received'}">
+                    <p v-cloak>{{message.message}}</p>
                 </div>
             </div>
             <!--/Sezione chat -->

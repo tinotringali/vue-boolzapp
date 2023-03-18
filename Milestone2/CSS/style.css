@@ -44,14 +44,6 @@ COMMON
     justify-content: space-around;
 }
 
-.align-items-end{
-    align-items: flex-end;
-}
-
-.align-items-start{
-    align-items: flex-start;
-}
-
 .flex-column{
     flex-direction: column;
 }
@@ -196,6 +188,7 @@ form{
     border-radius: 10px;
     margin-bottom: 8px;
     padding: 5px;
+    
 }
 
 .text{
