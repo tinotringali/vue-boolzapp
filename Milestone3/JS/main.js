@@ -4,6 +4,7 @@ const { createApp } = Vue
     data() {
       return {
         active: 0,
+        newMessage: '',
         contacts: [
             {
                 name: 'Michele',
@@ -170,9 +171,22 @@ const { createApp } = Vue
         
       }
     },
+
     methods: {
+        
         selectChat(index){
             this.active = index;
         },
+        
+        addMessagge() {
+            if (this.newMessage != '') {
+                this.contacts[this.active].messages.push({ message: this.newMessage, status: 'sent' }); 
+            }
+            setTimeout(this.userReply, 1000)
+        },
+
+        userReply(){
+            this.contacts[this.active].messages.push({ message: 'ok', status: 'received' })
+        }
     }
   }).mount('#app')
