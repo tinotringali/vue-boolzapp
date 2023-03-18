@@ -44,12 +44,16 @@ COMMON
     justify-content: space-around;
 }
 
-.justify-content-start{
-    justify-content: flex-start;
+.align-items-end{
+    align-items: flex-end;
 }
 
-.justify-content-end{
-    justify-content: flex-end;
+.align-items-start{
+    align-items: flex-start;
+}
+
+.flex-column{
+    flex-direction: column;
 }
 
 .p-1{
@@ -83,6 +87,7 @@ COMMON
 .text-dark-gray{
     color: #6b7376;
 }
+
 .text-blue{
     color: lightskyblue;
 }
@@ -167,7 +172,13 @@ form{
     padding-bottom: 5px;
 }
 
+.usercontact:active{
+    background-color: #e9ebeb;
+}
+
 .chat{
+    overflow:auto;
+    padding: 2.5rem;
     height: 545px;
     background-image: url("../img/mine.jpg");
 }
@@ -182,9 +193,9 @@ form{
 
 .send,.received{
     width: 250px;
-    height: 40px;
     border-radius: 10px;
-    flex-shrink: 0;
+    margin-bottom: 8px;
+    padding: 5px;
 }
 
 .text{
@@ -196,4 +207,12 @@ form{
     height: 35px;
     border: none;
     border-radius: 5px;
+}
+
+.btn-send{
+    border: none;
+}
+
+.fa-paper-plane:active{
+    color: lightseagreen;
 }
