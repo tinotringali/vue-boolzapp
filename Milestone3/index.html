@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font-awesome -->
+    <!-- link CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+     <!-- link CSS -->
+    <title>Boolzapp</title>
+</head>
+<body>
+
+    <div class="backgroundTop"></div>
+
+    <div id="app" class="Boolzapp d-flex justify-center m-auto">
+        <!-- LEFT SIDE  -->
+        <div class="leftSide">
+            <!-- Header top utente -->
+            <div class="headerTop d-flex justify-content-between align-items-center p-1">
+                <div class="d-flex align-items-center">
+                    <img class="img" src="img/avatar_io.jpg" alt="avatarIO">
+                    <span class="m-x">Sofia</span>
+                </div>
+                <div class="d-flex">
+                    <i class="fa-solid fa-circle-notch text-gray"></i>
+                    <i class="fa-solid fa-message text-gray m-left"></i>
+                    <i class="fa-solid fa-ellipsis-vertical text-gray m-left"></i>
+                </div>
+            </div>
+            <!--/Header top utente -->
+            <!-- Sezione notifiche -->
+            <div class="headerMiddle d-flex align-items-center p-1">
+                <div class="bell d-flex align-items-center justify-center">
+                    <i class="fa-solid fa-bell-slash"></i></div>
+                <div class="m-x">
+                    <h5>Ricevi notifiche di nuovi messaggi</h5>
+                    <a class="text-gray" href="">Attiva notifiche desktop</a>
+                </div>
+            </div>
+            <!--/Sezione notifiche -->
+            <!-- Sezione per la ricerca delle chat -->
+            <div class="headerBottom p-2">
+                <form class="d-flex" role="search">
+                    <button class="bnt-search" type="submit"><i class="text-gray
+                        fa-solid fa-magnifying-glass"></i></button>
+                    <input class="inputnewchat" type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search">
+                </form>
+            </div>
+            <!--/Sezione per la ricerca delle chat -->
+            <!-- Sezione contatti -->
+            <div v-cloak class="contact p-1">
+                <div class="usercontact d-flex m-y" v-for="(contact, index) in contacts" @click="selectChat(index)" :class="{active: index === active}">
+                    <img class="img" :src="contact.avatar" alt="avatar">
+                    <div class="m-x">
+                        <div><strong>{{ contact.name }}</strong></div>
+                        <span class="text-gray" style="font-size: 12px;">Ultimo messaggio inviato</span>
+                    </div>
+                </div>
+            </div>
+            <!--/Sezione contatti -->
+        </div>
+        <!-- LEFT SIDE  -->
+
+        <!-- RIGHT SIDE -->
+        <div class="rightSide">
+            <!-- Header top utente -->
+            <div class="headerTopright d-flex justify-content-between align-items-center p-1">
+                <div class="d-flex align-items-center">
+                    <img v-cloak class="img" :src="contacts[active].avatar" alt="avatarIO">
+                    <span v-cloak class="m-x">{{contacts[active].name}}</span>
+                </div>
+                <div class="d-flex">
+                    <i class="fa-solid fa-magnifying-glass text-gray"></i>
+                    <i class="fa-solid fa-paperclip text-gray m-left"></i>
+                    <i class="fa-solid fa-ellipsis-vertical text-gray m-left"></i>
+                </div>
+            </div>
+            <!--/Header top utente -->
+            <!-- Sezione chat --> 
+            <div class="chat">
+                <div class="d-flex flex-column" v-for="(message, index) in contacts[active].messages" :class="{send: message.status === 'sent', received: message.status === 'received'}">
+                    <p v-cloak>{{message.message}}</p>
+                </div>
+            </div>
+            <!--/Sezione chat -->
+            <!-- Sezione invio messaggi -->
+            <div class="d-flex align-items-center text p-1">
+                <i class="fa-regular fa-face-smile text-dark-gray m-x"></i>
+                <input class="inputtext" type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search">
+                <i class="fa-solid fa-microphone text-dark-gray m-x"></i>
+                <button class="btn-send"><i class="fa-solid fa-paper-plane text-blue"></i></button>
+                
+            </div>
+            <!--Sezione invio messaggi -->
+        </div>
+        <!-- RIGHT SIDE -->
+    </div>
+    
+    <!-- VUEjs -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- VUEjs -->
+    <!-- My Js -->
+    <script src="JS/main.js"></script>
+    <!-- My Js -->
+</body>
+</html>
