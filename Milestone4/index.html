@@ -47,13 +47,13 @@
                 <form class="d-flex" role="search">
                     <button class="bnt-search" type="submit"><i class="text-gray
                         fa-solid fa-magnifying-glass"></i></button>
-                    <input class="inputnewchat" type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search">
+                    <input class="inputnewchat" type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search" v-model="searchChat" @keyup="chatFilter">
                 </form>
             </div>
             <!--/Sezione per la ricerca delle chat -->
             <!-- Sezione contatti -->
             <div v-cloak class="contact p-1">
-                <div class="usercontact d-flex m-y" v-for="(contact, index) in contacts" @click="selectChat(index)" :class="{active: index === active}">
+                <div class="usercontact d-flex m-y" v-for="(contact, index) in chatFilter()" @click="selectChat(index)" :class="{active: index === active}">
                     <img class="img" :src="contact.avatar" alt="avatar">
                     <div class="m-x">
                         <div><strong>{{ contact.name }}</strong></div>

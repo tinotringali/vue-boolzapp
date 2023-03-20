@@ -5,6 +5,7 @@ const { createApp } = Vue
       return {
         active: 0,
         newMessage: '',
+        searchChat: '',
         contacts: [
             {
                 name: 'Michele',
@@ -187,6 +188,14 @@ const { createApp } = Vue
 
         userReply(){
             this.contacts[this.active].messages.push({ message: 'ok', status: 'received' })
+        },
+
+        chatFilter() {
+            if (this.searchChat !== '') {
+                return this.contacts.filter(element => (element.name).toLowerCase().includes(this.searchChat.toLowerCase()));
+            } else {
+                return this.contacts;
+            }
         }
     }
   }).mount('#app')
