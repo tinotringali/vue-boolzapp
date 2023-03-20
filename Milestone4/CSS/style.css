@@ -1,0 +1,221 @@
+
+/* 
+-------
+RESET
+-------
+ */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #dadbd3;
+    height: 100vh;
+    position: relative;
+}
+
+[v-cloak] {
+    display: none;
+}
+/* 
+-------
+COMMON
+-------
+ */
+.d-flex{
+    display: flex;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-around{
+    justify-content: space-around;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.p-1{
+    padding: 10px;
+}
+
+.p-2{
+    padding: 5px;
+}
+
+.m-auto{
+    margin: auto;
+}
+
+.m-y{
+    margin: 10px 0;
+}
+
+.m-x{
+    margin: 0 10px;
+}
+
+.m-left{
+    margin-left: 10px;
+}
+
+.text-gray{
+    color: #b1b1b1;
+}
+
+.text-dark-gray{
+    color: #6b7376;
+}
+
+.text-blue{
+    color: lightskyblue;
+}
+
+.img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/* 
+-------
+Boolzapp
+-------
+ */
+.Boolzapp{
+    width: 75%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+.backgroundTop{
+    width: 100vw;
+    height: 120px;
+    background-color: #159588;
+}
+
+.leftSide{
+    width: 35%;
+}
+
+.rightSide{
+    width: 65%;
+}
+
+.headerTop,.headerBottom,.headerTopright,.text{
+    background-color: #eaeaea;
+}
+
+.headerTop{
+    border-right: 1px solid #b1b1b1;
+}
+
+.headerMiddle{
+    background-color: #91dafa;
+}
+
+.bell{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #91dafa;
+}
+
+form{
+    height: 30px;
+
+}
+
+.bnt-search{
+    width: 15% ;
+    background-color: white;
+    border: none;
+    border: 1px solid #eaeaea;
+}
+
+.inputnewchat{
+ width: 85%;
+ border: none;
+ border: 1px solid #eaeaea;
+}
+
+.contact{
+    background-color: white;
+    height: 500px;
+}
+
+.usercontact{
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 5px;
+}
+
+.usercontact:active{
+    background-color: #e9ebeb;
+}
+
+.chat{
+    overflow:auto;
+    padding: 2.5rem;
+    height: 545px;
+    background-image: url("../img/mine.jpg");
+}
+
+.send{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.received{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+.send p{
+    background-color: #d6f8bced;
+}
+
+.received p{
+    background-color: white;
+}
+
+.chat p{
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.text{
+    background-color: #f3eeea;
+}
+
+.inputtext{
+    width: 90%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-send{
+    border: none;
+}
+
+.fa-paper-plane:active{
+    color: lightseagreen;
+}
