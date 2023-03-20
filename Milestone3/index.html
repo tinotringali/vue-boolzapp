@@ -82,8 +82,8 @@
             <!--/Header top utente -->
             <!-- Sezione chat --> 
             <div class="chat">
-                <div class="d-flex flex-column" v-for="(message, index) in contacts[active].messages" :class="{send: message.status === 'sent', received: message.status === 'received'}">
-                    <p v-cloak>{{message.message}}</p>
+                <div class="send" v-for="(message, index) in contacts[active].messages" :class="{send: message.status === 'sent', received: message.status === 'received'}">
+                    <p>{{ message.message }}</p>
                 </div>
             </div>
             <!--/Sezione chat -->

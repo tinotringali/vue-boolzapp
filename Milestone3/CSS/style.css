@@ -176,19 +176,29 @@ form{
 }
 
 .send{
-    background-color: #d6f8bc;
+    display: flex;
+    justify-content: end;
+    width: 100%;
 }
 
 .received{
-    background-color: #ffffff;
+    display: flex;
+    justify-content: start;
+    width: 100%;
 }
 
-.send,.received{
-    width: 250px;
-    border-radius: 10px;
-    margin-bottom: 8px;
-    padding: 5px;
-    
+.send p{
+    background-color: #d6f8bced;
+}
+
+.received p{
+    background-color: white;
+}
+
+.chat p{
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .text{
